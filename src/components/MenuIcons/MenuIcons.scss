@@ -1,0 +1,26 @@
+.MenuIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 70vh;
+    margin-top: 30px;
+    justify-content: space-between;
+
+    .menu-div{
+        transition: box-shadow .3s;
+        border-radius:10px;
+        // float: left;
+        display: flex;
+        // padding: 5px 5px;
+        width: 70%;
+        align-items: center;
+
+
+        &:hover{
+            box-shadow: 0 0 11px rgba(33,33,33,.2);
+            font-weight: bolder;
+            cursor: pointer;
+        }
+    }
+}
