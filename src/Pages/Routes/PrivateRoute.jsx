@@ -8,7 +8,6 @@ import { fetchUserData } from '../../redux/auth/userSlice';
 const PrivateRoute = ({ children }) => {
     const navigate = useNavigate();
     const token = localStorage.getItem('token')
-    // const location = useLocation();
     const dispatch = useDispatch();
     const { user } = useSelector(state => state.userData);
 
@@ -20,9 +19,8 @@ const PrivateRoute = ({ children }) => {
         // eslint-disable-next-line
     }, [user])
 
-
     if (!token) {
-        navigate('/');
+        return navigate('/');
     } else {
         return children;
     }
